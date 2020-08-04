@@ -1,8 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 body {
@@ -11,7 +14,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: lightskyblue;
+    background-image: url(Pictures/Yellow.jpg), url(Pictures/Red.jpg);
+    background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed, fixed;
+    background-size: 540px 540px, cover;
+    background-position: center, center;
 }
 
 .container {
@@ -21,29 +28,36 @@ body {
     top: 50%;
     left: 50%;
     margin: -250px 0 0 -250px;
-    border: 3px solid lightyellow;
-    background: lightsalmon;
+    background: #cd1d33;
 }
 
-.header {
-    background: green;
+.header h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin-top: 5px;
+    margin-bottom: -8px;
+    font-family: 'Varela Round', sans-serif;
+    text-shadow: 0 0 10px white;
 }
 
-.keys {
-    background: lightblue;
+h2 {
+    margin-top: 2px;
+    margin-bottom: 3px;
+    font-family: 'Caveat', cursive;
+    text-shadow: 0 0 10px white;
 }
 
 .key {
-    border: 3px solid lightslategrey;
+    border: 3px solid black;
     border-radius: 5px;
 
     width: 100px;
     height: 100px;
 
     text-align: center;
-    color: white;
-    background: lightcoral;
-    text-shadow: 0 0 5px purple;
+    color: black;
+    background: white;
+    text-shadow: 0 0 2px #dc253d;
 
     display: flex;
     flex-direction: column;
@@ -56,10 +70,33 @@ body {
     transition: all 0.07s;
 }
 
+.runaway_key {
+    border: 3px solid black;
+    border-radius: 5px;
+
+    width: 33px;
+    height: 200px;
+
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    color: black;
+    background: white;
+    text-shadow: 0 0 10px #dc253d;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin-left: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    transition: all 0.07s;
+}
+
 .sound-effects {
     display: flex;
     flex-direction: row;
-    background: red;
 }
 
 .playing {
@@ -76,7 +113,7 @@ kbd {
 .sound {
     font-size: 10px;
     letter-spacing: 1px;
-    color: lightgoldenrodyellow;
+    color: black;
 }
 
 .runaway {
@@ -85,9 +122,12 @@ kbd {
     padding: 0;
     display: flex;
     flex-direction: row;
-    background: green;
+    justify-items: center;
+    justify-content: center;
 }
 
 .footer {
-    background: lightblue;
+    margin-top: -6px;
+    padding: 10px;
+    text-shadow: 0 0 5px white;
 }
